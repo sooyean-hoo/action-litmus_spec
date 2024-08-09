@@ -4,13 +4,16 @@ author: Puppet
 inputs:
   puppet_gem_version:
     description: 'The version of the Puppet gem to use for the current test set'
-    default: ~> 6.0
+    default: ~> 7.0
   check:
     description: 'The rake check task to run'
     default: parallel_spec
   bundler_args:
     description: 'Arguments to pass to bundler'
     default: --without system_tests
+  bundler_version:
+    description: 'Bundler version to use'
+    default: ''
 runs:
   using: node12
   main: 'lib/litmus_spec.js'
